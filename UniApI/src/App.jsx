@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import './App.css'
 const SearchPanel = () => {
   const [searchParam, setSearchParam] = useState('');
   const [universities, setUniversities] = useState([]);
