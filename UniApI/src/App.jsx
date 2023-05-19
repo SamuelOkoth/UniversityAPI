@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import './App.css'
+import  { useState, useEffect } from 'react';
+import '/App.css'
+
 const SearchPanel = () => {
   const [searchParam, setSearchParam] = useState('');
   const [universities, setUniversities] = useState([]);
@@ -34,17 +35,22 @@ const SearchPanel = () => {
       <form>
         <input type="text" value={searchParam} onChange={handleSearch} placeholder="Enter country name" />
       </form>
-      {loading ? (
-        <p>Loading...</p>
-      ) : universities.length > 0 ? (
-        <ul>
-          {universities.map((university) => (
-            <li key={university.name}>{university.name}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>No universities found.</p>
-      )}
+      <div className="university-cards">
+        {loading ? (
+          <p>Loading...</p>
+        ) : universities.length > 0 ? (
+          universities.map((university) => (
+            <div key={university.name} className="university-card">
+              <h2>{university.name}</h2>
+              <p>Country: {university.country}</p>
+              <p>Website: {university.web_pages[0]}</p>
+              <p>Domain: {university.domains[0]}</p>
+            </div>
+          ))
+        ) : (
+          <p>No universities found.</p>
+        )}
+      </div>
     </div>
   );
 };

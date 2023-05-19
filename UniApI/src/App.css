@@ -4,6 +4,28 @@
   padding: 2rem;
   text-align: center;
 }
+.university-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.university-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.university-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.university-card p {
+  margin-bottom: 5px;
+}
 
 .logo {
   height: 6em;
