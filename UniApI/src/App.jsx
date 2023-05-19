@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import '/App.css'
+import './App.css'
 
 const SearchPanel = () => {
   const [searchParam, setSearchParam] = useState('');
@@ -28,6 +28,8 @@ const SearchPanel = () => {
     event.preventDefault();
     setSearchParam(event.target.value);
   };
+
+  
 
   return (
     <div>
